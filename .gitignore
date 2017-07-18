@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings/
+build.xml
+build/
+dist/
+nbproject/
