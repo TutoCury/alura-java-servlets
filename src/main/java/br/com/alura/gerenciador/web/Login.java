@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
         Usuario usuario = new UsuarioDAO().buscaPorEmailESenha(email, senha);
         if (usuario != null) {
             HttpSession session = req.getSession();
-            session.setAttribute("usuario.logado", usuario);
+            session.setAttribute("usuarioLogado", usuario);
             writer.println("Usuário Logado: " + usuario.getEmail());
         } else {
             writer.println("Usuário ou senha inválidos");
