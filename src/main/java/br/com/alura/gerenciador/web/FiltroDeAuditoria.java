@@ -27,11 +27,11 @@ public class FiltroDeAuditoria implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain) throws IOException, ServletException {
-        String usuario = "<deslogado>";
 
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
 
+        String usuario = "<deslogado>";
         Cookie usuarioLogado = new Cookies(req.getCookies()).getUsuarioLogado();
         if (usuarioLogado != null) {
             usuario = usuarioLogado.getValue();
@@ -41,7 +41,6 @@ public class FiltroDeAuditoria implements Filter {
 
         System.out.println("Usuário " + usuario + " acessando a URI " + req.getRequestURI());
         chain.doFilter(request, response);
-
     }
 
     @Override

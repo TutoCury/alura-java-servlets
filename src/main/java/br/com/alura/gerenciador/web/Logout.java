@@ -24,11 +24,7 @@ public class Logout extends HttpServlet {
         }
         
         PrintWriter writer = resp.getWriter();
-        writer.println("<html>");
-        writer.println("<body>");
-        writer.println("Usuário deslogado!");
-        writer.println("</body>");
-        writer.println("</html>");
+        writer.println("<html><body>Usuário deslogado!</body></html>");
     }
     
 }
