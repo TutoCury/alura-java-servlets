@@ -15,13 +15,15 @@
 
         <br /><br />
 
-        <form action="logout" method="post">
+        <form action="fazTudo" method="post">
+            <input type="hidden" name="tarefa" value="Logout" />
             <input type="submit" value="Logout" />
         </form>
 
         <br /><br />
 
-        <form action="novaEmpresa" method="post">
+        <form action="fazTudo" method="post">
+            <input type="hidden" name="tarefa" value="NovaEmpresa" />
             Nome: <input type="text" name="nome" /><br />
             <input type="submit" value="Enviar" />
         </form>
